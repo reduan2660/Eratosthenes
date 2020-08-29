@@ -23,7 +23,7 @@ async function elemenatePrime() {
     inputNumber = parseInt(inputFieldforNumber.value);
     col = Math.floor(Math.sqrt(inputNumber));
   }
-  if ((inputDelay = parseInt(inputFieldforDelay.value))) {
+  if (parseInt(inputFieldforDelay.value)) {
     inputDelay = parseInt(inputFieldforDelay.value);
   }
 
