@@ -23,8 +23,8 @@ async function elemenatePrime() {
     inputNumber = parseInt(inputFieldforNumber.value);
     col = Math.floor(Math.sqrt(inputNumber));
   }
-  if (parseInt(inputFieldforDelay.value)) {
-    inputDelay = parseInt(inputFieldforDelay.value);
+  if (parseFloat(inputFieldforDelay.value)) {
+    inputDelay = parseFloat(inputFieldforDelay.value);
   }
 
   //   Creating Boxes
