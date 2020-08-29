@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+#contor-sec {
+  height: 10vh;
+  background-color: #39cfc8;
+  font-size: 3rem;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#contor-sec input {
+  margin: 0 50px 0 10px;
+}
+
+#box-container {
+  margin: auto;
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[10];
+      grid-template-columns: repeat(10, 1fr);
+}
+
+.box {
+  height: 5rem;
+  width: 5rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(#78fff8), to(#78ffd6));
+  background-image: linear-gradient(to right, #78fff8, #78ffd6);
+  border-radius: 10px;
+  margin: 20px auto;
+  cursor: pointer;
+  font-size: 5rem;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.notPrime {
+  border: 0px solid #3d3d3d;
+  border-radius: 10px;
+  -webkit-animation: box-animation 0.4s forwards;
+          animation: box-animation 0.4s forwards;
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+
+@-webkit-keyframes box-animation {
+  from {
+    border: 0px solid #4e4e4e;
+    border-radius: 10px;
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+  to {
+    border: 3px solid #424242;
+    border-radius: 0px;
+    -webkit-filter: brightness(30%);
+            filter: brightness(30%);
+  }
+}
+
+@keyframes box-animation {
+  from {
+    border: 0px solid #4e4e4e;
+    border-radius: 10px;
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+  to {
+    border: 3px solid #424242;
+    border-radius: 0px;
+    -webkit-filter: brightness(30%);
+            filter: brightness(30%);
+  }
+}
+
+.far {
+  font-size: 2rem;
+}
+
+.far:hover {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+/*# sourceMappingURL=style.css.map */

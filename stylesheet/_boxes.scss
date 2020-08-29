@@ -1,0 +1,52 @@
+#box-container {
+  margin: auto;
+  width: 80%;
+  height: auto;
+  // border: 1px solid rgb(151, 151, 151);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.box {
+  height: 5rem;
+  width: 5rem;
+  background-image: linear-gradient(to right, #78fff8, #78ffd6);
+  border-radius: 10px;
+  margin: 20px auto;
+  cursor: pointer;
+
+  font-size: 5rem;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notPrime {
+  border: 0px solid rgb(61, 61, 61);
+  border-radius: 10px;
+  animation: box-animation 0.4s forwards;
+  filter: brightness(100%);
+}
+
+@keyframes box-animation {
+  from {
+    border: 0px solid rgb(78, 78, 78);
+    border-radius: 10px;
+    filter: brightness(100%);
+  }
+  to {
+    border: 3px solid rgb(66, 66, 66);
+    border-radius: 0px;
+    filter: brightness(30%);
+  }
+}
+
+.far {
+  font-size: 2rem;
+}
+
+.far:hover {
+  filter: brightness(90%);
+}
