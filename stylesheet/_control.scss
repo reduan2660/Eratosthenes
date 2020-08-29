@@ -1,14 +1,110 @@
-#contor-sec {
-  height: 10vh;
-  background-color: #39cfc8;
-  font-size: 3rem;
-  color: white;
+#control-sec {
+  height: 17vh;
+  background-color: rgba(77, 77, 77, 0.329);
 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 2rem;
+}
+
+#hero {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 5rem;
+
+  #title {
+    font-size: 7rem;
+    line-height: 2.5rem;
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  #play {
+    font-size: 8rem;
+    color: $box-active;
+    filter: brightness(110%);
+  }
+  #play:hover {
+    filter: brightness(100%);
+  }
+
+  border-right: 1px solid white;
+}
+
+// #Status {
+//   color: white;
+//   font-size: 1rem;
+// }
+
+#controller {
+  font-size: 4rem;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 
-  input {
-    margin: 0 50px 0 10px;
+  #NumberSec {
+    h1 {
+      font-size: 3rem;
+    }
+    margin: 2rem;
+    color: white;
+    input {
+      color: white;
+      background: none;
+      border: none;
+      border-bottom: 1px solid white;
+    }
+
+    input:focus {
+      border-bottom: 1px solid $box-active;
+    }
   }
+
+  #SpeedSec {
+    h1 {
+      font-size: 3rem;
+    }
+    margin: 2rem;
+    color: white;
+  }
+}
+
+#inputDelay {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: auto;
+  height: 1px;
+  background: #ffffff;
+  outline: none;
+  opacity: 0.8;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border: none;
+}
+
+/* Mouse-over effects */
+#inputDelay:hover {
+  opacity: 1;
+}
+
+#inputDelay::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 10px;
+  background: $box-active;
+  cursor: pointer;
+  border: none;
+}
+
+#inputDelay::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: $box-active;
+  cursor: pointer;
+  border: none;
 }

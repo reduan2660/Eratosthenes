@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sieve of Eratosthenes</title>
+    <link rel="icon" href="images/icon.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
@@ -11,29 +12,49 @@
     <link rel="stylesheet" href="stylesheet/style.css" />
   </head>
   <body>
-    <div id="contor-sec">
-      <label for="inputNumber">Number</label>
-      <input type="text" name="inputNumber" id="inputNumber" placeholder="10" />
+    <div id="control-sec">
+      <div id="hero">
+        <div id="title">
+          <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes"
+            >Sieve of <br />
+            Eratosthenes
+          </a>
+        </div>
+        <div id="play">
+          <i class="fa fa-play-circle" aria-hidden="true"></i>
+          <!-- <p id="Status">Click To Find</p> -->
+        </div>
+      </div>
+      <div id="controller">
+        <div id="NumberSec">
+          <h1>Number</h1>
 
-      <label for="inputDelay">Delay</label>
-      <input type="text" name="inputDelay" id="inputDelay" placeholder="0.5" />
-      <div id="goBtn">
-        <i class="far fa-arrow-alt-circle-right"></i>
+          <input
+            type="text"
+            name="inputNumber"
+            id="inputNumber"
+            placeholder="16"
+          />
+        </div>
+        <div id="SpeedSec">
+          <h1>Speed</h1>
+          <input
+            type="range"
+            min="1"
+            max="100"
+            step="1"
+            name="inputDelay"
+            id="inputDelay"
+          />
+        </div>
       </div>
     </div>
 
     <div id="box-container">
       <div class="box"><h1>1</h1></div>
-      <div class="box"><h1>2</h1></div>
-      <div class="box"><h1>3</h1></div>
-      <div class="box"><h1>4</h1></div>
-      <div class="box"><h1>5</h1></div>
-      <div class="box"><h1>6</h1></div>
-      <div class="box"><h1>7</h1></div>
-      <div class="box"><h1>8</h1></div>
-      <div class="box"><h1>9</h1></div>
-      <div class="box"><h1>10</h1></div>
     </div>
+
+    <div id="credit">alve Reduan <br />CSEDU'26</div>
     <!-- Script -->
     <script src="script/app.js"></script>
   </body>

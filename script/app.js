@@ -1,18 +1,45 @@
-const goBtn = document.getElementById("goBtn");
+const goBtn = document.getElementById("play");
 const container = document.getElementById("box-container");
 const inputFieldforNumber = document.getElementById("inputNumber");
 const inputFieldforDelay = document.getElementById("inputDelay");
 
-let inputNumber = 10;
-let inputDelay = 0.5;
-let col = 10;
+let inputNumber = 16;
+let inputDelay = 75;
+let col = 4;
 let i = 1;
+
+function createDefaultBoxes() {
+  // Deleting Boxes
+  while (container.children.length) {
+    container.removeChild(container.firstChild);
+  }
+
+  const numbering = [];
+  const box = [];
+  container.style.gridTemplateColumns = "repeat(" + col + ", 1fr)";
+  for (i = 1; i <= 16; i++) {
+    numbering[i - 1] = document.createElement("h1");
+    numbering[i - 1].innerText = i;
+
+    box[i - 1] = document.createElement("div");
+    if (inputNumber < parseInt(50)) box[i - 1].classList.add("box");
+    else if (inputNumber < parseInt(100)) box[i - 1].classList.add("box50-100");
+    else if (inputNumber < parseInt(500))
+      box[i - 1].classList.add("box100-500");
+    else box[i - 1].classList.add("box500-Un");
+    box[i - 1].appendChild(numbering[i - 1]);
+
+    container.appendChild(box[i - 1]);
+  }
+}
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 async function elemenatePrime() {
+  // Deactivating Play Button
+  goBtn.style.color = "#3a3a3a";
   // Deleting All Boxes
   while (container.children.length) {
     container.removeChild(container.firstChild);
@@ -24,7 +51,7 @@ async function elemenatePrime() {
     col = Math.floor(Math.sqrt(inputNumber));
   }
   if (parseFloat(inputFieldforDelay.value)) {
-    inputDelay = parseFloat(inputFieldforDelay.value);
+    inputDelay = (100 - parseFloat(inputFieldforDelay.value)) / 100;
   }
 
   //   Creating Boxes
@@ -36,7 +63,11 @@ async function elemenatePrime() {
     numbering[i - 1].innerText = i;
 
     box[i - 1] = document.createElement("div");
-    box[i - 1].classList.add("box");
+    if (inputNumber < parseInt(50)) box[i - 1].classList.add("box");
+    else if (inputNumber < parseInt(100)) box[i - 1].classList.add("box50-100");
+    else if (inputNumber < parseInt(500))
+      box[i - 1].classList.add("box100-500");
+    else box[i - 1].classList.add("box500-Un");
     box[i - 1].appendChild(numbering[i - 1]);
 
     container.appendChild(box[i - 1]);
@@ -62,10 +93,13 @@ async function elemenatePrime() {
       }
     }
   }
+
+  //Activating Button
+  goBtn.style.color = "#fb9984";
 }
 
 // Event Listeners
 goBtn.addEventListener("click", elemenatePrime);
 
 // On Load
-// elemenatePrime();
+createDefaultBoxes();

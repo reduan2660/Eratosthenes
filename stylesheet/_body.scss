@@ -3,4 +3,21 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 62.5%;
+  font-family: "Acme", sans-serif;
+}
+
+html {
+  background-image: linear-gradient(to right, $color1, $color2);
+}
+
+body {
+  min-width: 100vw;
+}
+
+#credit {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: white;
+  font-size: 10px;
 }
