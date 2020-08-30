@@ -292,7 +292,7 @@ body {
 
 @media screen and (max-width: 900px) {
   #control-sec {
-    height: 16vh;
+    height: 20vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -322,6 +322,9 @@ body {
     margin: 1rem;
   }
   #controller #NumberSec h1 {
+    font-size: 2rem;
+  }
+  #controller #NumberSec input {
     font-size: 2rem;
   }
   #controller #SpeedSec {
