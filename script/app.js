@@ -49,6 +49,9 @@ async function elemenatePrime() {
   if (parseInt(inputFieldforNumber.value)) {
     inputNumber = parseInt(inputFieldforNumber.value);
     col = Math.floor(Math.sqrt(inputNumber));
+    if (col > 33) {
+      col = parseInt(33);
+    }
   }
   if (parseFloat(inputFieldforDelay.value)) {
     inputDelay = (100 - parseFloat(inputFieldforDelay.value)) / 100;
@@ -89,7 +92,7 @@ async function elemenatePrime() {
         if (!box[j - 1].classList.contains("notPrime")) {
           box[j - 1].classList.add("notPrime");
         }
-        await sleep(inputDelay * 1000);
+        await sleep((inputDelay * 1000) / 2);
       }
     }
   }
